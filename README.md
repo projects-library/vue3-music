@@ -1,21 +1,3 @@
-<p align='center'>
-  <img src='https://user-images.githubusercontent.com/11247099/154486817-f86b8f20-5463-4122-b6e9-930622e757f2.png' alt='Vitesse - Opinionated Vite Starter Template' width='600'/>
-</p>
-
-<p align='center'>
-快速地<sup><em>Vitesse</em></sup> 创建 Web 应用
-<br>
-</p>
-
-<br>
-
-<p align='center'>
-<a href="https://vitesse.netlify.app/">在线 Demo</a>
-</p>
-
-<br>
-
-<br>
 
 ## 特性
 
@@ -106,72 +88,38 @@
   - [i18n Ally](https://marketplace.visualstudio.com/items?itemName=lokalise.i18n-ally) - 多合一的 I18n 支持
   - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 
-## 衍生项目
-
-由于这个模板的业务场景非常的局限，下面提供了一个精心策划的列表，列出了社区维护的具有不同偏好和功能集的衍生项目。也可以看看他们。当然也欢迎你 PR 提供自己的项目！
-
-###### 官方
-
-- [vitesse-lite](https://github.com/antfu/vitesse-lite) - Vitesse 的轻量版本
-- [vitesse-nuxt3](https://github.com/antfu/vitesse-nuxt3) - Vitesse 的 Nuxt 3 版本
-- [vitesse-nuxt-bridge](https://github.com/antfu/vitesse-nuxt-bridge) - Vitesse 的 Nuxt2 桥接版本
-- [vitesse-webext](https://github.com/antfu/vitesse-webext) - 开箱即用的浏览器扩展 vite 模板
-
-###### 社区
-
-[查看英文版](./README.md#community)
-
-## 现在可以试试!
-
-> Vitesse 需要 Node 版本 >=14.18
-
-### GitHub 模板
-
-[使用这个模板创建仓库](https://github.com/antfu/vitesse/generate).
-
-### 克隆到本地
-
-如果您更喜欢使用更干净的 git 历史记录手动执行此操作
-
-```bash
-npx degit antfu/vitesse my-vitesse-app
-cd my-vitesse-app
-pnpm i # 如果你没装过 pnpm, 可以先运行: npm install -g pnpm
-```
-
-## 清单
-
-使用此模板时，请尝试按照清单正确更新您自己的信息
-
-- [ ] 在 `LICENSE` 中改变作者名
-- [ ] 在 `App.vue` 中改变标题
-- [ ] 在 `vite.config.ts` 更改主机名
-- [ ] 在 `public` 目录下改变favicon
-- [ ] 移除 `.github` 文件夹中包含资助的信息
-- [ ] 整理 README 并删除路由
-
-紧接着, 享受吧 :)
-
-## 使用
-
-### 开发
-
-只需要执行以下命令就可以在 http://localhost:3333 中看到
-
-```bash
-pnpm dev
-```
-
-### 构建
-
-构建该应用只需要执行以下命令
-
-```bash
-pnpm build
-```
-
-然后你会看到用于发布的 `dist` 文件夹被生成。
-
 ### 部署到 Netlify
 
 前往 [Netlify](https://app.netlify.com/start) 并选择你的仓库, 一路 `OK` 下去，稍等一下后，你的应用将被创建.
+
+
+## 相关资料
+**aribnb代码规范** https://github.com/libertyAlone/airbnb-javascript-style-guide-cn  
+
+**angular提交规范** https://zj-git-guide.readthedocs.io/zh_CN/latest/message/Angular%E6%8F%90%E4%BA%A4%E4%BF%A1%E6%81%AF%E8%A7%84%E8%8C%83/   
+
+**husky(Githook工具)**  https://typicode.github.io/husky/#/  
+
+**commitlint(commit 规范提交工具)**  https://commitlint.js.org/#/  
+
+**lint-staged(在代码commit之前，进行代码规则检查,避免不规则代码进入仓库，lint-staged能够让lint只检测暂存区的文件，速度很快)**  https://github.com/okonet/lint-staged#readme
+
+## 提交方式
+
+### 第一种: vscode可视化提交
+commit信息格式需遵守angular提交规范,例`feat: xxx`
+
+### 第二种: 脚本提交
+在添加完提交的文件之后,运行`npm run commit`命令,在终端即可选择并填写相关提交信息
+
+## 第三种: 使用命令提交
+
+运行命令`npm i commitizen cz-conventional-changelog -g`,全局安装依赖包,之后在添加完提交的文件,在终端输入`git cz`即在终端即可选择并填写相关提交信息
+
+## 自动化格式方式
+
+### 1.vite运行项目时
+项目在运行时会检查并修复相关代码规范,不能自动修复的需手动修复
+
+### 2.提交代码时
+在commit之前,会自动去检查并格式化代码,如果有不能自动修复的需手动修复后才能提交代码
