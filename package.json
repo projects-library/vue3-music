@@ -14,7 +14,8 @@
     "up": "taze major -I",
     "prepare": "husky install",
     "commit": "git-cz",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "ls-lint": "ls-lint"
   },
   "dependencies": {
     "@unocss/reset": "^0.45.29",
@@ -33,6 +34,7 @@
     "@commitlint/config-conventional": "^17.1.0",
     "@iconify-json/carbon": "^1.1.8",
     "@intlify/vite-plugin-vue-i18n": "^6.0.3",
+    "@ls-lint/ls-lint": "^1.11.2",
     "@types/markdown-it-link-attributes": "^3.0.1",
     "@types/nprogress": "^0.2.0",
     "@vitejs/plugin-vue": "^3.1.2",
@@ -74,6 +76,7 @@
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,vue}": [
       "eslint --fix",
+      "pnpm ls-lint",
       "git add "
     ]
   },
