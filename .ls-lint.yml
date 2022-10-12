@@ -1,0 +1,18 @@
+ls:
+  types:
+    .d.ts: kebab-case
+  src:
+    .dir: kebab-case | regex:[a-z]{2}-[A-Z]{2} | regex:__[a-z0-9_]+__
+    .js: kebab-case
+    .ts: kebab-case | point.case | camelCase
+    .tsx: PascalCase | camelCase
+    .d.ts: kebab-case
+    .vue: PascalCase | kebab-case | regex:\[\.*[a-z]+\]
+    .cy.ts: PascalCase | kebab-case | point.case | camelCase
+    .cy.tsx: PascalCase | kebab-case | point.case | camelCase
+    .e2e.ts: PascalCase | kebab-case | point.case | camelCase
+    .test.ts: PascalCase | kebab-case | point.case | camelCase
+
+ignore:
+  - .git
+  - node_modules
