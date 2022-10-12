@@ -16,8 +16,8 @@ module.exports = {
         'deploy',
         'chore',
         'revert',
-        'merge'
-      ]
+        'merge',
+      ],
     ],
     'type-empty': [2, 'never'],
     'type-case': [2, 'always', 'lower-case'],
@@ -27,6 +27,6 @@ module.exports = {
     'subject-full-stop': [2, 'never', '.'],
     'subject-case': [2, 'never', []],
     'body-leading-blank': [1, 'always'],
-    'footer-leading-blank': [1, 'always']
-  }
+    'footer-leading-blank': [1, 'always'],
+  },
 }
