@@ -6,6 +6,7 @@ specifiers:
   '@commitlint/config-conventional': ^17.1.0
   '@iconify-json/carbon': ^1.1.8
   '@intlify/vite-plugin-vue-i18n': ^6.0.3
+  '@ls-lint/ls-lint': ^1.11.2
   '@types/markdown-it-link-attributes': ^3.0.1
   '@types/nprogress': ^0.2.0
   '@unocss/reset': ^0.45.29
@@ -71,6 +72,7 @@ devDependencies:
   '@commitlint/config-conventional': 17.1.0
   '@iconify-json/carbon': 1.1.8
   '@intlify/vite-plugin-vue-i18n': 6.0.3_vite@3.1.7+vue-i18n@9.2.2
+  '@ls-lint/ls-lint': 1.11.2
   '@types/markdown-it-link-attributes': 3.0.1
   '@types/nprogress': 0.2.0
   '@vitejs/plugin-vue': 3.1.2_vite@3.1.7+vue@3.2.40
@@ -1808,6 +1810,13 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
+    dev: true
+
+  /@ls-lint/ls-lint/1.11.2:
+    resolution: {integrity: sha512-kX+CCjgNz+NHCaOcFyJLSBLRgAoyOxN18QFLpgucz5ILvbr60BGjwKaoPYTv/rBV/77L+Oz82lpP24mzJ2wGsQ==}
+    cpu: [x64, arm64]
+    os: [darwin, linux, win32]
+    hasBin: true
     dev: true
 
   /@mdit-vue/plugin-component/0.11.1:
