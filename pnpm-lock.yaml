@@ -38,6 +38,7 @@ specifiers:
   unplugin-auto-import: ^0.11.2
   unplugin-vue-components: ^0.22.8
   vite: ^3.1.7
+  vite-plugin-eslint: ^1.8.1
   vite-plugin-inspect: ^0.7.5
   vite-plugin-pages: ^0.26.0
   vite-plugin-pwa: ^0.13.1
@@ -97,6 +98,7 @@ devDependencies:
   unplugin-auto-import: 0.11.2_@vueuse+core@9.3.0
   unplugin-vue-components: 0.22.8_vue@3.2.40
   vite: 3.1.7
+  vite-plugin-eslint: 1.8.1_eslint@8.25.0+vite@3.1.7
   vite-plugin-inspect: 0.7.5_vite@3.1.7
   vite-plugin-pages: 0.26.0_vite@3.1.7
   vite-plugin-pwa: 0.13.1_vite@3.1.7
@@ -2039,6 +2041,13 @@ packages:
     resolution: {integrity: sha512-9AonUzyTjXXhEOa0DnqpzZi6VHlqKMswga9EXjpXnnqxwLtdvPPtlO8evrI5D9S6asFRCQ6v+wpiUKbw+vKqyg==}
     dependencies:
       '@types/ms': 0.7.31
+    dev: true
+
+  /@types/eslint/8.4.6:
+    resolution: {integrity: sha512-/fqTbjxyFUaYNO7VcW5g+4npmqVACz1bB7RTHYuLj+PRjw9hrCwrUXVQFpChUS0JsyEFvMZ7U/PfmvWgxJhI9g==}
+    dependencies:
+      '@types/estree': 0.0.39
+      '@types/json-schema': 7.0.11
     dev: true
 
   /@types/estree/0.0.39:
@@ -9378,6 +9387,19 @@ packages:
       assert-plus: 1.0.0
       core-util-is: 1.0.2
       extsprintf: 1.3.0
+    dev: true
+
+  /vite-plugin-eslint/1.8.1_eslint@8.25.0+vite@3.1.7:
+    resolution: {integrity: sha512-PqdMf3Y2fLO9FsNPmMX+//2BF5SF8nEWspZdgl4kSt7UvHDRHVVfHvxsD7ULYzZrJDGRxR81Nq7TOFgwMnUang==}
+    peerDependencies:
+      eslint: '>=7'
+      vite: '>=2'
+    dependencies:
+      '@rollup/pluginutils': 4.2.1
+      '@types/eslint': 8.4.6
+      eslint: 8.25.0
+      rollup: 2.79.1
+      vite: 3.1.7
     dev: true
 
   /vite-plugin-inspect/0.7.5_vite@3.1.7:

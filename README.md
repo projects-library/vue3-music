@@ -91,35 +91,3 @@
 ### 部署到 Netlify
 
 前往 [Netlify](https://app.netlify.com/start) 并选择你的仓库, 一路 `OK` 下去，稍等一下后，你的应用将被创建.
-
-
-## 相关资料
-**aribnb代码规范** https://github.com/libertyAlone/airbnb-javascript-style-guide-cn  
-
-**angular提交规范** https://zj-git-guide.readthedocs.io/zh_CN/latest/message/Angular%E6%8F%90%E4%BA%A4%E4%BF%A1%E6%81%AF%E8%A7%84%E8%8C%83/   
-
-**husky(Githook工具)**  https://typicode.github.io/husky/#/  
-
-**commitlint(commit 规范提交工具)**  https://commitlint.js.org/#/  
-
-**lint-staged(在代码commit之前，进行代码规则检查,避免不规则代码进入仓库，lint-staged能够让lint只检测暂存区的文件，速度很快)**  https://github.com/okonet/lint-staged#readme
-
-## 提交方式
-
-### 第一种: vscode可视化提交
-commit信息格式需遵守angular提交规范,例`feat: xxx`
-
-### 第二种: 脚本提交
-在添加完提交的文件之后,运行`npm run commit`命令,在终端即可选择并填写相关提交信息
-
-## 第三种: 使用命令提交
-
-运行命令`npm i commitizen cz-conventional-changelog -g`,全局安装依赖包,之后在添加完提交的文件,在终端输入`git cz`即在终端即可选择并填写相关提交信息
-
-## 自动化格式方式
-
-### 1.vite运行项目时
-项目在运行时会检查并修复相关代码规范,不能自动修复的需手动修复
-
-### 2.提交代码时
-在commit之前,会自动去检查并格式化代码,如果有不能自动修复的需手动修复后才能提交代码
