@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "private": true,
   "packageManager": "pnpm@7.8.0",
   "scripts": {
@@ -61,8 +62,8 @@
     "unocss": "^0.45.29",
     "unplugin-auto-import": "^0.11.2",
     "unplugin-vue-components": "^0.22.8",
-    "vite": "^3.1.7",
     "vite-plugin-eslint": "^1.8.1",
+    "vite": "^3.1.8",
     "vite-plugin-inspect": "^0.7.5",
     "vite-plugin-pages": "^0.26.0",
     "vite-plugin-pwa": "^0.13.1",
@@ -72,7 +73,7 @@
     "vite-ssg": "^0.21.1",
     "vite-ssg-sitemap": "^0.4.3",
     "vitest": "^0.24.1",
-    "vue-tsc": "^1.0.6"
+    "vue-tsc": "^1.0.7"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,vue}": [
@@ -83,7 +84,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-customizable"
+      "path": "./node_modules/cz-conventional-changelog"
     }
   }
 }
