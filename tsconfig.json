@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "outDir": "./",
     "baseUrl": ".",
     "module": "ESNext",
     "target": "ESNext",
@@ -28,5 +27,5 @@
       "~/*": ["src/*"]
     }
   },
-  "exclude": ["dist", "node_modules", "cypress"]
+  "exclude": ["dist", "node_modules", "cypress", "**/*.cjs"]
 }
