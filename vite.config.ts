@@ -14,7 +14,6 @@ import Inspect from 'vite-plugin-inspect'
 import LinkAttributes from 'markdown-it-link-attributes'
 import Unocss from 'unocss/vite'
 import Shiki from 'markdown-it-shiki'
-import eslint from 'vite-plugin-eslint'
 
 export default defineConfig({
   resolve: {
@@ -25,9 +24,6 @@ export default defineConfig({
 
   plugins: [
     Preview(),
-    eslint({
-      fix: true
-    }),
     Vue({
       include: [/\.vue$/, /\.md$/],
       reactivityTransform: true,
