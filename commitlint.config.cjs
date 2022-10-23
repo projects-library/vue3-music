@@ -17,6 +17,7 @@ module.exports = {
         'chore',
         'revert',
         'merge',
+        'build',
       ],
     ],
     'type-empty': [2, 'never'],
