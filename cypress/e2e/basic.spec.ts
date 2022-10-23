@@ -24,13 +24,4 @@ context('Basic', () => {
       .should('eq', 'http://localhost:3333/')
   })
 
-  it('markdown', () => {
-    cy.get('[title="About"]')
-      .click()
-      .url()
-      .should('eq', 'http://localhost:3333/about')
-
-    cy.get('.shiki')
-      .should('exist')
-  })
 })

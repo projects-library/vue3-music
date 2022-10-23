@@ -1,26 +1,6 @@
-<script setup lang="ts">
-// https://github.com/vueuse/head
-// you can use this to manipulate the document head in any components,
-// they will be rendered correctly in the html results with vite-ssg
-useHead({
-  title: 'vue3-music',
-  meta: [
-    { name: 'description', content: 'This is a music project about vue3' },
-    {
-      name: 'theme-color',
-      content: computed(() => isDark.value ? '#00aba9' : '#ffffff'),
-    },
-  ],
-  link: [
-    {
-      rel: 'icon',
-      type: 'image/svg+xml',
-      href: computed(() => preferredDark.value ? '/favicon-dark.svg' : '/favicon.svg'),
-    },
-  ],
-})
-</script>
-
 <template>
-  <RouterView />
+  <main font-sans p="x-4 y-10" text="center gray-700 dark:gray-200">
+    <router-view />
+    <Footer />
+  </main>
 </template>
