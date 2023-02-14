@@ -35,4 +35,9 @@ export default defineConfig({
     transformerVariantGroup(),
   ],
   safelist: 'prose prose-sm m-auto text-left'.split(' '),
+  rules: [
+    // 配置识别 bg-var(xxx) 生成 background-color: var(xxx)
+    [/^bg-var\((.*?)\)$/, ([, d]) => ({ 'background-color': `var(${d})` })],
+    [/^text-var\((.*?)\)$/, ([, d]) => ({ color: `var(${d})` })],
+  ],
 })

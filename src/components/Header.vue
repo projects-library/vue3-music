@@ -1,43 +1,39 @@
 <script lang="ts" setup>
-const { t, availableLocales, locale } = useI18n()
+// const { t, availableLocales, locale } = useI18n()
 
-const toggleLocales = () => {
-  // change to some real logic
-  const locales = availableLocales
-  locale.value = locales[(locales.indexOf(locale.value) + 1) % locales.length]
-}
+// const toggleLocales = () => {
+//   // change to some real logic
+//   const locales = availableLocales
+//   locale.value = locales[(locales.indexOf(locale.value) + 1) % locales.length]
+// }
+
+const themeVisible = ref(false)
 </script>
 
 <template>
-  <div class="h-3.57rem flex justify-start items-center bg-#262626">
-    <div class="w-17.8rem bg-#292929 h-full">
+  <div class="h-3.43rem flex justify-start items-center bg-var(--header-bg-color) text-var(--header-font-color)">
+    <div class="w-17.2rem h-full flex items-center">
       left
     </div>
     <div class="flex-1">
-      <nav text-xl leading-3 float-right pr-10>
-        <RouterLink class="icon-btn mx-2" to="/" :title="t('button.home')">
-          <div i-carbon-color-palette />
-        </RouterLink>
+      <div flex flex-row justify-end items-center pr-10>
+        <div class="width-10.28rem mx-2 p-0.5rem py-0.3rem bg-var(--header-input-bgcolor) flex flex-row items-center b-rd-5 text-1rem">
+          <div i-carbon-search text-1rem class="text-var(--header-input-font-color)" />
+          <input class="bg-transparent outline-none h-1rem ml-0.3rem text-var(--header-input-font-color)" type="text">
+        </div>
 
-        <button class="icon-btn mx-2 !outline-none" :title="t('button.toggle_dark')" @click="toggleDark()">
-          <div i="carbon-sun dark:carbon-moon" />
-        </button>
-
-        <a class="icon-btn mx-2" :title="t('button.toggle_langs')" @click="toggleLocales()">
-          <div i-carbon-language />
-        </a>
-
-        <RouterLink class="icon-btn mx-2" to="/about" :title="t('button.about')">
-          <div i-carbon-dicom-overlay />
-        </RouterLink>
-
+        <div class="icon-btn mx-2 text-1rem hover:bg-rgba(0,0,0,0.3)" @click="themeVisible = !themeVisible">
+          <div i="carbon-user-simulation" />
+        </div>
         <a
-          class="icon-btn mx-2" rel="noreferrer" href="https://github.com/antfu/vitesse" target="_blank"
+          class="icon-btn mx-2 text-1rem" rel="noreferrer" href="https://github.com/projects-library/vue3-music" target="_blank"
           title="GitHub"
         >
           <div i-carbon-logo-github />
         </a>
-      </nav>
+      </div>
     </div>
+
+    <theme v-model="themeVisible" />
   </div>
 </template>
