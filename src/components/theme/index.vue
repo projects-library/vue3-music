@@ -1,6 +1,6 @@
 <script setup lang='ts'>
 import useAppStore from '../../modules/pinia/modules/app'
-import { RedVariables, whiteVariables } from '../theme/variables'
+import { BlackVariables, RedVariables, whiteVariables } from './variables'
 
 defineProps({
   modelValue: Boolean,
@@ -33,6 +33,12 @@ const themes: ThemeData[] = [
     color: '#d33a31',
     variables: RedVariables,
   },
+  {
+    name: t('theme.black'),
+    key: 'black',
+    color: '#202020',
+    variables: BlackVariables,
+  },
 ]
 
 const changeTheme = (index: number) => {
@@ -46,11 +52,11 @@ const changeTheme = (index: number) => {
 
 <template>
   <div class="popover-modal" :class="[!modelValue && 'hide']" @click.self="emmits('update:modelValue', !modelValue)">
-    <div class="popover transition-all" :style="{ opacity: modelValue ? 1 : 0 }">
+    <div class="popover transition-all bg-var(--popover-bg-color)" :style="{ opacity: modelValue ? 1 : 0 }">
       <div class="flex flex-row justify-center items-center">
-        <div v-for="item, index in themes" :key="item.color" class="mx-0.5rem flex flex-col items-center cursor-pointer" @click="changeTheme(index)">
-          <div class="w-1.9rem h-1.9rem b-rd-5 flex border-1 border-#ebeaea" :style="{ backgroundColor: item.color }" />
-          <span class="text-0.9rem pt-0.5rem">{{ item.name }}</span>
+        <div v-for="item, index in themes" :key="item.color" class="mx-7px flex flex-col items-center cursor-pointer" @click="changeTheme(index)">
+          <div class="w-27px h-27px b-rd-5 flex border-1 border-#ebeaea" :style="{ backgroundColor: item.color }" />
+          <span class="text-12.5px pt-7px">{{ item.name }}</span>
         </div>
       </div>
     </div>
@@ -74,19 +80,18 @@ const changeTheme = (index: number) => {
   width: 200px;
   border-radius: 7px;
   position: absolute;
-  top: 3.2rem;
-  right: 3.43rem;
-  background: #fff;
+  top: 49px;
+  right: 48px;
   color: #606266;
-  padding: 0.8rem;
-  box-shadow: 0 0.14286rem 0.57143rem 0 rgb(0 0 0 / 20%);
+  padding: 11px;
+  box-shadow: 0 2px 8px 0 rgb(0 0 0 / 20%);
 
 }
 .popover::before{
   content: '';
   width: 0;
   height: 0;
-  border: 0.45rem solid;
+  border: 6.3px solid;
   position: absolute;
   top: -13px;
   right: 32px;

@@ -16,4 +16,6 @@
   --header-input-font-color: #EFB6B2;
   /* 底部上边框颜色 */
   --footer-border-color: #F5F5F5;
+  /* popover弹窗背景颜色 */
+  --popover-bg-color: #fff;
 }
