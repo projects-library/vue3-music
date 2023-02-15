@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen flex flex-col">
+  <div class="min-h-screen flex flex-col bg-var(--global-bg-color)">
     <Header />
     <div class="flex justify-start flex-grow">
       <Nav />
