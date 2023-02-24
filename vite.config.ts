@@ -1,6 +1,6 @@
 /// <reference types="vitest" />
 import path from 'path'
-import { defineConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
@@ -10,11 +10,25 @@ import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import Inspect from 'vite-plugin-inspect'
 import Unocss from 'unocss/vite'
 
-export default defineConfig({
+export default defineConfig(({mode}) => {
+  const env = loadEnv(mode, process.cwd(), '')
+return {
   resolve: {
     alias: {
       '~/': `${path.resolve(__dirname, 'src')}/`,
     },
+  },
+
+  server: {
+    open: true,
+    proxy: {
+      '/netease-api': {
+        target: env.VITE_BASE_URL,
+        rewrite: (path) => path.replace(/^\/netease-api/, ''),
+        changeOrigin: true,
+        secure: false,
+      },
+    }
   },
 
   plugins: [
@@ -76,4 +90,4 @@ export default defineConfig({
     include: ['test/**/*.test.ts'],
     environment: 'jsdom'
   }
-})
+}})
