@@ -3,11 +3,8 @@
     <Header />
     <div class="flex justify-start flex-grow">
       <Nav />
-      <main class="px-4 py-10 text-center text-gray-700 dark:text-gray-200 flex-1">
+      <main class="px-4 pt-48px py-10 text-center text-gray-700 dark:text-gray-200 flex-1">
         <RouterView />
-        <div class="mt-5 mx-auto text-center opacity-75 dark:opacity-50 text-sm">
-          [Home Layout]
-        </div>
       </main>
     </div>
     <Footer />
