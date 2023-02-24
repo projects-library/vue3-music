@@ -17,6 +17,18 @@ export default defineConfig({
     },
   },
 
+  server: {
+    open: true,
+    proxy: {
+      '/netease-api': {
+        target: import.meta.env.VITE_BASE_URL,
+        rewrite: (path) => path.replace(/^\/netease-api/, ''),
+        changeOrigin: true,
+        secure: false,
+      },
+    }
+  },
+
   plugins: [
     Vue({
       include: [/\.vue$/],
