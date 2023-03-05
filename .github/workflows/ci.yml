@@ -62,7 +62,8 @@ jobs:
           cache: pnpm
 
       - run: pnpm install
-      - run: pnpm run test:unit
+      - run: pnpm exec cypress install
+      - run: pnpm run test:unit:ci
 
   test-e2e:
     runs-on: ubuntu-latest
