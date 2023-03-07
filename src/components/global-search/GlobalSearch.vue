@@ -21,7 +21,7 @@ watch(() => props.themeVisible, (val) => {
 <template>
   <div class="width-152px mx-7px p-7px py-4.2px bg-var(--header-input-bgcolor) flex flex-row items-center b-rd-5 text-14px">
     <div i-carbon-search text-14px class="text-var(--header-input-font-color)" />
-    <input class="bg-transparent outline-none h-14px ml-4.2px text-var(--header-input-font-color) global-search" type="text" :placeholder="$t('search.placeholder')" @focus="visible = true">
+    <input tid="search-input" class="bg-transparent outline-none h-14px ml-4.2px text-var(--header-input-font-color) global-search" type="text" :placeholder="$t('search.placeholder')" @focus="visible = true">
   </div>
 
   <div v-show="visible" class="w-100vw fixed top-48px right-0 z-1 search-bg" @click="visible = false">
