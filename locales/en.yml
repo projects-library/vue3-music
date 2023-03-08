@@ -12,6 +12,10 @@ intro:
   aka: Also known as
   whats-your-name: What's your name?
 not-found: Not found
+search:
+  placeholder: Search
+  search_hot: Hot search
+  search_history: Search history
 theme:
   white: White
   red: Red

@@ -12,6 +12,10 @@ intro:
   aka: 也叫
   whats-your-name: 输入你的名字
 not-found: 未找到页面
+search:
+  placeholder: 搜索
+  search_hot: 热门搜索
+  search_history: 搜索历史
 theme:
   white: 白色
   red: 红色

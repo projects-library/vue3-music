@@ -1,5 +1,5 @@
 /// <reference types="vitest" />
-import path from 'path'
+import path from 'node:path'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
@@ -32,7 +32,6 @@ export default defineConfig({
   plugins: [
     Vue({
       include: [/\.vue$/],
-      reactivityTransform: true,
     }),
 
     // https://github.com/hannoeru/vite-plugin-pages
@@ -85,7 +84,7 @@ export default defineConfig({
 
   // https://github.com/vitest-dev/vitest
   test: {
-    include: ['test/**/*.test.ts'],
-    environment: 'jsdom'
-  }
+    include: ['**/__test__/**/*.test.ts'],
+    environment: 'jsdom',
+  },
 })

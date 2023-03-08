@@ -4,7 +4,20 @@ export default defineConfig({
   e2e: {
     baseUrl: 'http://localhost:3333',
     chromeWebSecurity: false,
-    specPattern: 'cypress/e2e/**/*.spec.*',
+    specPattern: 'src/**/__test__/**/*.e2e.*',
     supportFile: false,
+    viewportWidth: 1920,
+    viewportHeight: 1080,
+    video: false,
+  },
+
+  component: {
+    devServer: {
+      framework: 'vue',
+      bundler: 'vite',
+    },
+    specPattern: 'src/**/__test__/**/*.cy.*',
+    viewportWidth: 1920,
+    viewportHeight: 1080,
   },
 })
