@@ -15,3 +15,8 @@ html.dark {
 #nprogress {
   pointer-events: none;
 }
+
+::selection {
+  background-color: var(--default-color);
+  color: #fff;
+}

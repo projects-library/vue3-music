@@ -6,5 +6,8 @@ export const nprogress = (router: Router) => {
     if (to.path !== from.path)
       NProgress.start()
   })
-  router.afterEach(() => { NProgress.done() })
+
+  router.afterEach(() => {
+    NProgress.done()
+  })
 }

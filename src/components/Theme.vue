@@ -1,9 +1,13 @@
 <script setup lang='ts'>
-import useAppStore from '../../modules/pinia/modules/app'
-import { BlackVariables, RedVariables, whiteVariables } from './variables'
+/**
+ * @file 皮肤切换弹窗
+ * @author xiatao<1126084777@qq.com>
+ */
+import useAppStore from '../modules/pinia/modules/app'
+import { BlackVariables, RedVariables, whiteVariables } from '../config/variables'
 
-defineProps({
-  modelValue: Boolean,
+withDefaults(defineProps<{ modelValue: boolean }>(), {
+  modelValue: false,
 })
 
 const emmits = defineEmits(['update:modelValue'])
@@ -81,7 +85,7 @@ const changeTheme = (index: number) => {
   border-radius: 7px;
   position: absolute;
   top: 49px;
-  right: 48px;
+  right: 25px;
   color: #606266;
   padding: 11px;
   box-shadow: 0 2px 8px 0 rgb(0 0 0 / 20%);
@@ -94,7 +98,7 @@ const changeTheme = (index: number) => {
   border: 6.3px solid;
   position: absolute;
   top: -13px;
-  right: 32px;
-  border-color: transparent transparent #fff;
+  right: 41px;
+  border-color: transparent transparent var(--popover-bg-color);
 }
 </style>
